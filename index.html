@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Наши моменты</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Marck+Script&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="petals"></canvas>
+
+<section id="home">
+  <div class="hero">
+    <h1>Наши моменты</h1>
+    <p>маленькая книга о нас двоих <span class="heart">♥</span></p>
+  </div>
+  <div class="cards" id="cards">
+    <button class="card c1" id="open1"><div class="art">🌹</div><div class="date">4 ноября</div><div class="name">Наше знакомство</div></button>
+    <div class="card c2 locked" tabindex="0"><svg class="lock" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 018 0v3"/></svg><div class="art">🌅</div><div class="date">скоро</div><div class="name">Первое свидание</div></div>
+    <div class="card c3 locked" tabindex="0"><svg class="lock" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 018 0v3"/></svg><div class="art">🌊</div><div class="date">скоро</div><div class="name">Наше путешествие</div></div>
+    <div class="card c4 locked" tabindex="0"><svg class="lock" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 018 0v3"/></svg><div class="art">🌿</div><div class="date">скоро</div><div class="name">Наше «навсегда»</div></div>
+  </div>
+</section>
+<div class="hint" id="hint">Этот момент ещё впереди… 🤍</div>
+
+<section id="book" aria-label="Наше знакомство">
+  <button class="close" id="close" aria-label="Закрыть">✕</button>
+  <div class="stage" id="stage"></div>
+  <div class="nav"><button id="prev" aria-label="Назад">‹</button><div class="dots" id="dots"></div><button id="next" aria-label="Дальше">›</button></div>
+</section>
+
+<div id="music">
+  <div class="mp">
+    <div class="mp-top">
+      <div class="vinyl disc-bg"></div>
+      <div class="mp-info"><div class="mp-t" id="mt">—</div><div class="mp-a" id="ma"></div></div>
+      <button class="mp-x" id="mx" aria-label="Свернуть">✕</button>
+    </div>
+    <div class="mp-prog"><span id="tc">0:00</span><input type="range" id="seek" min="0" max="100" value="0" step="0.1" aria-label="Перемотка"><span id="td">0:00</span></div>
+    <div class="mp-ctrl">
+      <button id="shuf" aria-label="Перемешать">⇄</button>
+      <button id="pv" aria-label="Назад">⏮</button>
+      <button id="pp" class="big" aria-label="Играть/пауза">▶</button>
+      <button id="nx" aria-label="Вперёд">⏭</button>
+      <button id="rep" aria-label="Повтор">↻</button>
+    </div>
+    <div class="mp-vol"><span>♪</span><input type="range" id="vol" min="0" max="1" step="0.01" value="0.8" aria-label="Громкость"></div>
+    <div class="mp-list" id="list"></div>
+    <p class="mp-note" id="note"></p>
+  </div>
+  <button id="disc" class="disc-bg" aria-label="Музыка"></button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
